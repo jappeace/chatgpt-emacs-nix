@@ -1,3 +1,4 @@
+# https://monospacedmonologues.com/2021/05/running-agda-with-nix/
 { pkgs ? import ./pin.nix }:
 pkgs.mkShell{
     buildInputs = [
