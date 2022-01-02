@@ -11,5 +11,6 @@ export PATH=$PATH:$agsy/bin
 
 MODE=$(agda-mode locate | sed s+/agda2.el++g)
 
-ln -s $MODE $out
+mkdir -p $out
+cp -R $MODE/* $out/
 ''
