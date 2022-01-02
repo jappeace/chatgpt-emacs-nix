@@ -5,3 +5,5 @@ main.agdai
 nix/nix/
 nix/result
 result
+
+.envrc
