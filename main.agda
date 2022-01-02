@@ -1,4 +1,4 @@
-module Everything where
+module main where
 
 open import IO
 open import Data.Unit using () renaming (⊤ to Unit)
