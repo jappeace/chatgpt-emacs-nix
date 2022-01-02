@@ -1,6 +1,8 @@
 module main where
 
 open import IO
-open import Data.Unit using () renaming (⊤ to Unit)
+import Data.Unit.Polymorphic.Base  as ⊤
+import IO.Primitive as Prim
 
-main = run (putStrLn "Hello, Lummie!")
+main : Prim.IO ⊤.⊤
+main = run (putStrLn "Hello, World!")
