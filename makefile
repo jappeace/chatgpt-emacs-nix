@@ -1,4 +1,6 @@
+default: build
+
 build:
-	agda --include-path="$(STDLIB)/share/agda" --compile ./main.agda
+	agda --compile ./main.agda  --include-path "$(STD_LIB)/src" --guardedness --ignore-interfaces --compile-dir=out
 check: 
-	agda --include-path="$(STDLIB)/share/agda" ./main.agda
+	agda --include-path "$(STD_LIB)" ./main.agda

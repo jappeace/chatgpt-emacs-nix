@@ -1,11 +1,9 @@
 { pkgs ? import ./pin.nix }:
 pkgs.mkShell{
     buildInputs = [
+        pkgs.agsy
         pkgs.inotify-tools
-        pkgs.haskellPackages.Agda 
-        pkgs.AgdaStdlib 
-        (pkgs.haskellPackages.ghcWithPackages ( p: [p.ieee]) )
     ];
-    STDLIB=pkgs.AgdaStdlib;
+    AGSY = pkgs.agsy;
+    STD_LIB = pkgs.agdaPackages.standard-library;
 }
-
