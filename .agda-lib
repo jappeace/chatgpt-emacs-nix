@@ -1,0 +1,5 @@
+name: agsy
+include:
+  src
+depend:
+  standard-library

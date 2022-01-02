@@ -1,4 +1,7 @@
+default: build
+
+.PHONY:build
 build:
-	agda --include-path="$(STDLIB)/share/agda" --compile ./main.agda
-check: 
-	agda --include-path="$(STDLIB)/share/agda" ./main.agda
+	agda ./src/main.agda
+check:
+	agda ./src/main.agda
