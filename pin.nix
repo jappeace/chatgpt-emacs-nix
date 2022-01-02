@@ -2,12 +2,17 @@ let
 pinnedPkgs = 
     (builtins.fetchGit {
     # Descriptive name to make the store path easier to identify
-    name = "nixos-pin-19.10.2019";
-    url = https://github.com/nixos/nixpkgs/;
-    rev = "f203d50d09052792866f926e7c2d3b3bf76d3388";
+    name = "nixos-pin-2022.01.02";
+    url = "https://github.com/nixos/nixpkgs/";
+    rev = "c0575333cd0b5139dcf3eaf9ee93d61037241067";
     }) ;
 in
 import pinnedPkgs {
-    # since I also use this for clients I don't want to have to care
-    config.allowUnfree = true; # took me too long to figure out
+  config = {
+    # set an agda https://github.com/NixOS/nixpkgs/blob/master/doc/languages-frameworks/agda.section.md#agda-agda
+    packageOverrides = pkgs: {
+      agsy = pkgs.agda.withPackages (p: [ p.standard-library ]);
+    };
+  };
+
 }
