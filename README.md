@@ -1,5 +1,7 @@
 [![Jappiejappie](https://img.shields.io/badge/twitch.tv-jappiejappie-purple?logo=twitch)](https://www.twitch.tv/jappiejappie)
 
+> With these 21 easy steps I got agda to reproduce proofs.
+
 Agda template.
 See this commit for global integration into [nixos](https://github.com/jappeace/linux-config/commit/18dc061161e8d1c07746a8298531a09fc8264724#diff-b71af8fb0d74d1998df8151d1a7f450f9e45c2609bc418e9e04f43f0a6f3cc85R32).
 You can change the target to your own github repo and move the pin around as desired.
