@@ -11,6 +11,8 @@ export PATH=$PATH:$agsy/bin
 
 MODE=$(agda-mode locate | sed s+/agda2.el++g)
 
-mkdir -p $out
-cp -R $MODE/* $out/
+mkdir -p $out/share/emacs/site-lisp/elpa/agda-mode-0.0.1/
+cp -R $MODE/* $out/share/emacs/site-lisp/elpa/agda-mode-0.0.1/
+
+
 ''
