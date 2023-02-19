@@ -13,6 +13,11 @@
     let
       pkgs = nixpkgs.legacyPackages.x86_64-linux;
     in {
-    defaultPackage.x86_64-linux = pkgs.emacsPackages.trivialBuild {pname="chatgpt"; src = ./src/.; };
+    defaultPackage.x86_64-linux =
+      pkgs.runCommand "build-chatgpt" {} ''
+      set -xe
+      mkdir -p $out/share/emacs/site-lisp/elpa/chatgpt-0.0.1/
+      cp ${./chatgpt.el} $out/share/emacs/site-lisp/elpa/chatgpt-0.0.1/chatgpt.el
+      '';
   };
 }
