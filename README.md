@@ -15,3 +15,7 @@ then I gave up.
 
 there is no advantage for a seperate repository as of right now
 because nobody appears to maintain this.
+see:
++ https://github.com/jappeace/linux-config/blob/work-machine/emacs/emacs.nix#L12
++ https://github.com/jappeace/linux-config/tree/work-machine/emacs
++ https://github.com/jappeace/linux-config/blob/work-machine/emacs/emacs.el#L622
