@@ -9,6 +9,6 @@
     let
       pkgs = nixpkgs.legacyPackages.x86_64-linux;
     in {
-    defaultPackage.x86_64-linux = pkgs.emacsPackages.callPackage ./src {};
+    defaultPackage.x86_64-linux = pkgs.emacsPackages.trivialBuild {pname="chatgpt"; src = ./src/.; };
   };
 }
